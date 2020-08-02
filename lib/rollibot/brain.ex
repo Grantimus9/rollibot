@@ -9,7 +9,12 @@ defmodule Rollibot.Brain do
   end
 
   def init(_) do
+    Rollibot.Light.blink_forever()
+
+    Rollibot.Motors.set_pullups()
+
     Rollibot.Motors.forward()
     {:ok, []}
   end
+
 end

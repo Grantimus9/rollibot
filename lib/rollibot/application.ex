@@ -14,7 +14,8 @@ defmodule Rollibot.Application do
         # Children for all targets
         # Starts a worker by calling: Rollibot.Worker.start_link(arg)
         # {Rollibot.Worker, arg},
-        Rollibot.Brain
+        Rollibot.Brain,
+        Rollibot.WallSensors
       ] ++ children(target())
 
     Supervisor.start_link(children, opts)
